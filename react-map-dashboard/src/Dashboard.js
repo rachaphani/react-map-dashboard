@@ -9,7 +9,8 @@ function Dashboard() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/dashboard", {
+        const res = await axios.get("http://15.168.140.61:5000/api/dashboard", {
+          
           headers: { Authorization: localStorage.getItem("token") },
         });
         setCards(res.data);
