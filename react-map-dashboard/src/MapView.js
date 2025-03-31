@@ -8,7 +8,9 @@ function MapView() {
   useEffect(() => {
     const fetchMapData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/map", {
+        const res = await axios.get("http://15.168.140.61:5000/api/map", {
+
+          
           headers: { Authorization: localStorage.getItem("token") },
         });
         setMapData(res.data);
